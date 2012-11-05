@@ -1,0 +1,12 @@
+doctype 5
+html
+  head
+    title= "W3C标准测试 - " + title
+    link(rel="stylesheet", href="/stylesheets/prepare.css")
+  body
+    .header 
+      | W3C标准测试 - 
+      span.b #{title}
+      - if(!noBack)
+        a.r.f12(href="/") 回到主页
+    block content

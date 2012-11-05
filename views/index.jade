@@ -1,0 +1,17 @@
+extends layout
+mixin postList(posts)
+  div.post_list
+    ul
+      - for(var i=0; i<posts.length; i++){
+        li
+          - var post = posts[i];
+          - if(post.type === "dir"){
+            div.dir_title= "+" + post.title
+            +postList(post.files)
+          - } else if(post.type === "file"){
+            a(href="posts/#{post.path}") #{post.title}
+          - }
+      - }
+
+block content
+  +postList(posts) 
