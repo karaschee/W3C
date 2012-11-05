@@ -1,5 +1,12 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+*.html text
+*.css text
+*.js text
+*.erb text
+*.rb text
+*.scss text
+*.ejs text
 
 # Custom for Visual Studio
 *.cs     diff=csharp
