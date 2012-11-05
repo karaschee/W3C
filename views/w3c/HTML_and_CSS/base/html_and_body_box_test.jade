@@ -1,6 +1,4 @@
-!!! 5
 //
-   
   前言：
   对于ie6，注释千万不能放在DOCTYPE之前，会使DOCTYPE失效，而无法激活IE的标准模式。
   本测试只针对IE6的标准模式。
@@ -20,16 +18,16 @@
   window的背景色 = html的背景色 || body的背景色
   window的背景色与html和body的大小无关（铺满整个窗口）。
   html有背景色时，body与普通元素一样显示自己的背景色。
-html
-  head
-    style(type='text/css')
-      /*html height*/
-      /*html { background:#eee; border:30px solid red; }
-      body { background:#069; margin:100px; padding:50px; border:30px solid #093;}*/
-      /*margin html*/
-      html { background:#eee; margin:100px; padding:50px; border:30px solid red; overflow-y:scroll; }
-      body { background:#069; margin:100px; padding:50px; border:30px solid #093; overflow:scroll;}
-      /*div on off*/
-      div { height:3000px; }
+extends regular-layout
+block content
+  style(type='text/css')
+    /*html height*/
+    /*html { background:#eee; border:30px solid red; }
+    body { background:#069; margin:100px; padding:50px; border:30px solid #093;}*/
+    /*margin html*/
+    html { background:#eee; margin:100px; padding:50px; border:30px solid red; overflow-y:scroll; }
+    body { background:#069; margin:100px; padding:50px; border:30px solid #093; overflow:scroll;}
+    /*div on off*/
+    div { height:3000px; }
   body
     div a
