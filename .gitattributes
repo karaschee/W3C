@@ -7,6 +7,7 @@
 *.rb text
 *.scss text
 *.ejs text
+*.jade text
 
 # Custom for Visual Studio
 *.cs     diff=csharp
